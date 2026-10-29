@@ -9,6 +9,13 @@ void setup()
     const uint8_t firmwareRevision = 0;
     openknx.init(firmwareRevision);
 
+    if (openknx.ledFunctions.useDefaultFunction())
+    {
+        openknx.ledFunctions.assignLed2Function(openknx.leds.getLed(OpenKNX::Led::LED_TYPE_INFO3), OPENKNX_LEDFUNC_SWA_STATUS+1); 
+        openknx.ledFunctions.assignLed2Function(openknx.leds.getLed(OpenKNX::Led::LED_TYPE_INFO2), OPENKNX_LEDFUNC_SWA_STATUS+2); 
+        openknx.ledFunctions.assignLed2Function(openknx.leds.getLed(OpenKNX::Led::LED_TYPE_INFO1), OPENKNX_LEDFUNC_SWA_STATUS+3);
+    }
+
     openknx.addModule(1, openknxLogic);
     openknx.addModule(2, openknxSwitchActuatorModule);
     
@@ -36,24 +43,16 @@ void loop()
     openknx.loop();
     if(knx.configured())
     {
-        openknx.info3Led.setColor(OPENKNX_SERIALLED_COLOR_GREEN);
-        openknx.info3Led.on(openknxSwitchActuatorModule.getChannelStatus(0));
-
-        openknx.info2Led.setColor(OPENKNX_SERIALLED_COLOR_GREEN);
-        openknx.info2Led.on(openknxSwitchActuatorModule.getChannelStatus(1));
-
-        openknx.info1Led.setColor(OPENKNX_SERIALLED_COLOR_GREEN);
-        openknx.info1Led.on(openknxSwitchActuatorModule.getChannelStatus(2));
     }
     else
     {
-        openknx.info3Led.setColor(OPENKNX_SERIALLED_COLOR_YELLOW);
-        openknx.info3Led.on();
+        openknx.ledFunctions.get(OPENKNX_LEDFUNC_SWA_STATUS+3)->color(OpenKNX::Led::Color::Yellow);
+        openknx.ledFunctions.get(OPENKNX_LEDFUNC_SWA_STATUS+3)->on();
 
-        openknx.info2Led.setColor(OPENKNX_SERIALLED_COLOR_YELLOW);
-        openknx.info2Led.on();
+        openknx.ledFunctions.get(OPENKNX_LEDFUNC_SWA_STATUS+2)->color(OpenKNX::Led::Color::Yellow);
+        openknx.ledFunctions.get(OPENKNX_LEDFUNC_SWA_STATUS+2)->on();
 
-        openknx.info1Led.setColor(OPENKNX_SERIALLED_COLOR_YELLOW);
-        openknx.info1Led.on();
+        openknx.ledFunctions.get(OPENKNX_LEDFUNC_SWA_STATUS+1)->color(OpenKNX::Led::Color::Yellow);
+        openknx.ledFunctions.get(OPENKNX_LEDFUNC_SWA_STATUS+1)->on();
     }
 }

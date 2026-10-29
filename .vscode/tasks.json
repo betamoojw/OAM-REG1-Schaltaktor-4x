@@ -12,7 +12,7 @@
                 "--Debug",
                 "-h",
                 "include/knxprod.h",
-                "src/REG1-Schaltaktor-4x.xml"
+                "src/REG1-Schaltaktor-4x-Dev.xml"
             ],
             "problemMatcher": [],
             "group": "test",
@@ -71,7 +71,7 @@
         },
         // Build a release package for distribution
         {
-            "label": "Build-Release",
+            "label": "Build-Release-Release",
             "type": "shell",
             "command": "scripts/Build-Release.ps1",
             "args": [
@@ -85,6 +85,7 @@
             "type": "shell",
             "command": "scripts/Build-Release.ps1",
             "args": [
+                "Dev"
             ],
             "problemMatcher": [],
             "group": "test"
