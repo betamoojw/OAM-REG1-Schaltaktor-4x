@@ -16,7 +16,7 @@
 #define MAIN_FirmwareName "REG1 Schaltaktor 4x"
 #define MAIN_OpenKnxId 0xA1
 #define MAIN_ApplicationNumber 60
-#define MAIN_ApplicationVersion 3
+#define MAIN_ApplicationVersion 4
 #define MAIN_ApplicationEncoding iso-8859-15
 #define MAIN_ParameterSize 6106
 #define MAIN_MaxKoNumber 165
@@ -143,11 +143,11 @@
 #define ParamBASE_ManualSave                          (knx.paramByte(BASE_ManualSave) & BASE_ManualSaveMask)
 // Zyklisches speichern
 #define ParamBASE_PeriodicSave                        (knx.paramByte(BASE_PeriodicSave))
-// Info1
+// Info1 (Rel. C)
 #define ParamBASE_Info1LedFunc                        (knx.paramWord(BASE_Info1LedFunc))
-// Info2
+// Info2 (Rel. B)
 #define ParamBASE_Info2LedFunc                        (knx.paramWord(BASE_Info2LedFunc))
-// Info3
+// Info3 (Rel. A)
 #define ParamBASE_Info3LedFunc                        (knx.paramWord(BASE_Info3LedFunc))
 // 
 #define ParamBASE_DefaultLedFunc                      ((bool)(knx.paramByte(BASE_DefaultLedFunc) & BASE_DefaultLedFuncMask))

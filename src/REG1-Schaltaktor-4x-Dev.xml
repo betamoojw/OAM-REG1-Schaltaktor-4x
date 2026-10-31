@@ -12,9 +12,6 @@
   <op:config name="%BASE_ShowInfo1LedFunc%" value="1"></op:config>
   <op:config name="%BASE_ShowInfo2LedFunc%" value="1"></op:config>
   <op:config name="%BASE_ShowInfo3LedFunc%" value="1"></op:config>
-  <op:config name="%BASE_Info1LedFunc_Access%" value="Read"></op:config>
-  <op:config name="%BASE_Info2LedFunc_Access%" value="Read"></op:config>
-  <op:config name="%BASE_Info3LedFunc_Access%" value="Read"></op:config>
 
   <op:ETS
     OpenKnxId="0xA1"

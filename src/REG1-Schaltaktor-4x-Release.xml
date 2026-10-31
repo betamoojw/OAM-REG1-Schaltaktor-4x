@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-model href="../../Organization/knxprod-support/knx_project_20/knx-editor.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <KNX xmlns="http://knx.org/xml/project/20" xmlns:op="http://github.com/OpenKNX/OpenKNXproducer">
+
+  <op:config name="%BASE_Info1LedLabel%" value=" (Rel. C)"></op:config>
+  <op:config name="%BASE_Info2LedLabel%" value=" (Rel. B)"></op:config>
+  <op:config name="%BASE_Info3LedLabel%" value=" (Rel. A)"></op:config>
+  <op:config name="%BASE_Info1LedFunc%" value="803"></op:config>
+  <op:config name="%BASE_Info2LedFunc%" value="802"></op:config>
+  <op:config name="%BASE_Info3LedFunc%" value="801"></op:config>
+  <op:config name="%BASE_ShowInfoLedPanel%" value="1"></op:config>
+  <op:config name="%BASE_ShowInfo1LedFunc%" value="1"></op:config>
+  <op:config name="%BASE_ShowInfo2LedFunc%" value="1"></op:config>
+  <op:config name="%BASE_ShowInfo3LedFunc%" value="1"></op:config>
+
   <op:ETS 
     OpenKnxId="0xA1"
     ApplicationNumber="60"
-    ApplicationVersion="0.3"
-    ReplacesVersions="0.2 0.1 0.0"
+    ApplicationVersion="0.4"
+    ReplacesVersions="0.3 0.2 0.1 0.0"
     ApplicationRevision="0"
     ProductName="REG1 Schaltaktor 4x"
     ApplicationName="REG1 Schaltaktor 4x-Beta"

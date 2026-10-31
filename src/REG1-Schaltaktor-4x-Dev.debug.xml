@@ -1589,9 +1589,9 @@
                 <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000006" Name="BASE_InternalTime" ParameterType="M-00FA_A-A13D-06-0000_PT-OnOffYesNo" Offset="0" BitOffset="4" Text="InternalTime" Access="None" Value="0" />
                 <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000091" Name="BASE_ManualSave" ParameterType="M-00FA_A-A13D-06-0000_PT-ManualSave" Offset="0" BitOffset="5" Text="Manuelles speichern" Value="0" />
                 <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000090" Name="BASE_PeriodicSave" ParameterType="M-00FA_A-A13D-06-0000_PT-PeriodicSave" Offset="1" BitOffset="0" Text="Zyklisches speichern" Value="0" />
-                <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000020" Name="BASE_Info1LedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-SLEDFunc" Offset="2" BitOffset="0" Text="Info1 (Rel. C)" Value="803" Access="Read" />
-                <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000021" Name="BASE_Info2LedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-SLEDFunc" Offset="4" BitOffset="0" Text="Info2 (Rel. B)" Value="802" Access="Read" />
-                <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000022" Name="BASE_Info3LedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-SLEDFunc" Offset="6" BitOffset="0" Text="Info3 (Rel. A)" Value="801" Access="Read" />
+                <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000020" Name="BASE_Info1LedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-SLEDFunc" Offset="2" BitOffset="0" Text="Info1 (Rel. C)" Value="803" Access="ReadWrite" />
+                <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000021" Name="BASE_Info2LedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-SLEDFunc" Offset="4" BitOffset="0" Text="Info2 (Rel. B)" Value="802" Access="ReadWrite" />
+                <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000022" Name="BASE_Info3LedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-SLEDFunc" Offset="6" BitOffset="0" Text="Info3 (Rel. A)" Value="801" Access="ReadWrite" />
                 <Parameter Id="M-00FA_A-A13D-06-0000_UP-1000029" Name="BASE_DefaultLedFunc" ParameterType="M-00FA_A-A13D-06-0000_PT-CheckBox" Offset="8" BitOffset="0" Text="" Value="1" />
                 <!--
                 
@@ -45381,8 +45381,8 @@ var uctChannelParams = {
 "BASE": {
   "version": 0x19,
   "share": {
-    "names": ["ExtendedSave","Info1LedFuncNotice","Info2LedFuncNotice","Info3LedFuncNotice","StartupDelayBase","StartupDelayTime","HeartbeatDelayBase","HeartbeatDelayTime","Timezone","CombinedTimeDate","SummertimeAll","SummertimeDE","SummertimeWorld","SummertimeKO","TimezoneCustom","Latitude","Longitude","Diagnose","Watchdog","ReadTimeDate","HeartbeatExtended","ManualSave","PeriodicSave","DefaultLedFunc:1","DefaultLedFunc:2"],
-    "defaults": [0,"","","",0,1,0,300,1,,2,2,0,0,"CET-1CEST,M3.5.0/2:00:00,M10.5.0/3:00:00",50.115377,8.683764,0,1,1,0,0,0,1,0]
+    "names": ["ExtendedSave","Info1LedFuncNotice","Info2LedFuncNotice","Info3LedFuncNotice","StartupDelayBase","StartupDelayTime","HeartbeatDelayBase","HeartbeatDelayTime","Timezone","CombinedTimeDate","SummertimeAll","SummertimeDE","SummertimeWorld","SummertimeKO","TimezoneCustom","Latitude","Longitude","Diagnose","Watchdog","ReadTimeDate","HeartbeatExtended","ManualSave","PeriodicSave","Info1LedFunc","Info2LedFunc","Info3LedFunc","DefaultLedFunc:1","DefaultLedFunc:2"],
+    "defaults": [0,"","","",0,1,0,300,1,,2,2,0,0,"CET-1CEST,M3.5.0/2:00:00,M10.5.0/3:00:00",50.115377,8.683764,0,1,1,0,0,0,803,802,801,1,0]
     }},
 "LOG": {
   "channels": 30,
@@ -188595,13 +188595,13 @@ function SWA_loadLearnedScenes(device, online, progress, context) {
       </ApplicationPrograms>
       <Baggages>
         <Baggage TargetPath="A1\3D\06" Name="ets.png" Id="M-00FA_BG-A1.5C3D.5C06-ets.2Epng">
-          <FileInfo TimeInfo="2026-10-29T20:40:09.1524071Z" />
+          <FileInfo TimeInfo="2026-10-31T13:54:32.8160072Z" />
         </Baggage>
         <Baggage TargetPath="A1\3D\06" Name="Help_de.zip" Id="M-00FA_BG-A1.5C3D.5C06-Help.5Fde.2Ezip">
-          <FileInfo TimeInfo="2026-10-29T20:40:09.7409588Z" />
+          <FileInfo TimeInfo="2026-10-31T13:54:33.3576715Z" />
         </Baggage>
         <Baggage TargetPath="A1\3D\06" Name="Icons.zip" Id="M-00FA_BG-A1.5C3D.5C06-Icons.2Ezip">
-          <FileInfo TimeInfo="2026-10-29T20:40:09.7849619Z" />
+          <FileInfo TimeInfo="2026-10-31T13:54:33.4027025Z" />
         </Baggage>
       </Baggages>
       <Hardware>
